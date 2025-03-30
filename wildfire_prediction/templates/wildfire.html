@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/wildfire.css'%}"> 
+</head>
+<body>
+    <div class="container">
+        <div class="card_head">
+            <h1>Wildfire Prediction</h1>
+            <h5>Predict the percentage of Wildfire Occurence</h5>
+        </div>
+        <div class="card">
+            <form method="post" action="{% url 'make_prediction' %}">
+                {% csrf_token %}
+                <div class="features">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="number" name="temperature" step="0.01" min="0.0" placeholder="Enter temperature" required>
+
+                    <label for="humidity">Humidity (%)</label>
+                    <input type="number" name="humidity"  step="0.01" min="0.0" max="100" placeholder="Enter humidity level" required>
+
+                    <label for="rain">Rain (mm/m<sup>2</sup>)</label>
+                    <input type="number" name="rain" step="0.01" min="0.0" placeholder="Enter rain" required>
+
+                    <label for="wind_speed">Wind Speed(Km/h)</label>
+                    <input type="number" name="wind_speed" step="0.01" min="0.0" placeholder="Enter wind Speed" required>
+
+                    <label for="fuel_moisture">Fine Fuel Moisture Code (FFMC 18.7 - 96.2)</label>
+                    <input type="number" step="0.01" min="18.7" max="96.2" name="fuel_moisture" placeholder="Enter fuel moisture" required>
+
+                    <label for="duff_moisture">Duff Moisture Code (DMC 1.1 - 291.3)</label>
+                    <input type="number" name="duff_moisture" step="0.01" min="1.1" max="291.3" placeholder="Enter duff moisture" required>
+
+                    <label for="drought">Drought Code (DC 7.9 - 860.6):</label>
+                    <input type="number" name="drought" step="0.01" min="7.9" max="860.6"
+                    placeholder="Enter drought code" required>
+
+                    <label for="initial_spread">Initial Spread Index (ISI 0.0 - 56.1):</label>
+                    <input type="number" name="initial_spread" step="0.01" min="0.0" max="56.1" placeholder="Enter initial spread index" required>
+
+                    <button type="submit">Predict</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="prediction">
+        {% if prediction %}
+            <h3>Prediction Result: {{ prediction }}</h3> 
+        {% endif %}
+    </div> -->
+</body>
+</html>

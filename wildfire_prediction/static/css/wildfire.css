@@ -1,0 +1,182 @@
+body{
+    background-image: url("/static/images/wildfire.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: left;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.card_head {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.card_head h1{
+   
+    font-size: 40px;
+    background: linear-gradient(45deg, #ff4500, #ffae00, #ffffff); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+}
+
+.card_head h5{
+    font-size: 20px; 
+    background: linear-gradient(45deg, #ff4500, #ffae00, #ffffff); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    margin-top: 0px; 
+    margin-bottom: 5px;
+} 
+
+.card {
+    width: 60%; 
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.features label {
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    width: 100%;
+}
+
+.features input, 
+.features select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000000;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.features input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.features select {
+    cursor: pointer;
+}
+
+.features button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff9800, #ff5722); 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: auto; 
+    /* min-width: 120px; */
+}
+
+/* Button Hover Effect */
+.features button:hover {
+    background: linear-gradient(135deg, #ff5722, #e64a19); 
+    transform: scale(1.05); 
+}
+
+.prediction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 350px;
+  
+} 
+
+.prediction h3 {
+    background: linear-gradient(45deg, #fffb00, #ff6a00, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 30px;
+    font-weight: bold;
+}  
+
+.prediction button {
+    background: linear-gradient(135deg, #ff9800, #ff5722); 
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    width: auto;
+}
+
+.prediction button:hover {
+    background: linear-gradient(135deg, #ff5722, #e64a19);
+    transform: scale(1.05);
+}
+
+.prediction button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
